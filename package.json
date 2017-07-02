@@ -1,0 +1,35 @@
+{
+  "name": "datetime-difference",
+  "version": "0.1.0",
+  "description": "A lightweight module which finds the difference between two dates in the human-friendly format",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZitRos/datetime-difference.git"
+  },
+  "keywords": [
+    "date",
+    "datetime",
+    "time",
+    "difference",
+    "between",
+    "dates",
+    "javascript",
+    "light",
+    "duration",
+    "interval"
+  ],
+  "author": "ZitRo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZitRos/datetime-difference/issues"
+  },
+  "homepage": "https://github.com/ZitRos/datetime-difference#readme",
+  "devDependencies": {
+    "ava": "^0.20.0",
+    "deep-is": "^0.1.3"
+  }
+}
