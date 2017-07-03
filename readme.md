@@ -18,7 +18,7 @@ import datetimeDifference from "datetime-difference";
 const date1 = new Date("12/17/2016, 05:23:55 PM");
 const date2 = new Date("2/21/2017, 07:12:42 AM");
 
-const result1 = datetimeDifference(date1, date2); /* result1 is {
+const result = datetimeDifference(date1, date2); /* result is {
     "years": 0,
     "months": 2,
     "days": 3,
@@ -58,6 +58,7 @@ The `datetime-difference` is shipped in a form of JavaScript module. Install it 
 ```bash
 npm install --save datetime-difference
 ```
+
 Licence
 -------
 
