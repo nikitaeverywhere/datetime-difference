@@ -28,19 +28,26 @@ const result1 = datetimeDifference(date1, date2); /* result1 is {
     "milliseconds": 0
 } */
 
-const date3 = new Date("1/1/2016, 00:00:00 PM");
+const date3 = new Date("1/1/2016, 00:00:00 AM");
 const date4 = new Date("1/1/2026, 00:00:00 AM");
 
 const result2 = datetimeDifference(date3, date4); /* result2 is {
     "years": 10,
     "months": 0,
-    "days": 0,  // 0, because, as a human, you don't think about leap years
-    "hours": 0, // as well as about daylight time when counting dates!
+    "days": 0,  // 0, because you don't think about leap years as 
+    "hours": 0, // well as about daylight time when counting dates!
     "minutes": 0,
     "seconds": 0,
     "milliseconds": 0
 } */
 
+// Another example: 
+// Get the result in readable format by parsing the resulting object
+const readme = Object.keys(result)
+    .filter(k => !!result[k])
+    .map(k => `${ result[k] } ${ k }`)
+    .join(", ");
+// readme is "2 months, 3 days, 13 hours, 48 minutes, 47 seconds"
 ```
 
 Installation
