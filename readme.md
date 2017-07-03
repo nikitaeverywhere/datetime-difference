@@ -4,8 +4,8 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](http://npm.anvaka.com/#/view/2d/datetime-difference)
 [![Build Status](https://travis-ci.org/ZitRos/datetime-difference.svg?branch=master)](https://travis-ci.org/ZitRos/datetime-difference)
 [![License](https://img.shields.io/github/license/zitros/datetime-difference.svg)](LICENSE)
-[![File Size](http://img.badgesize.io/ZitRos/datetime-difference/master/index.js?)](https://github.com/ZitRos/datetime-difference/blob/master/index.js)
-[![File Size (GZip)](http://img.badgesize.io/ZitRos/datetime-difference/master/index.js?compression=gzip&)](https://github.com/ZitRos/datetime-difference/blob/master/index.js)
+[![File Size](http://img.badgesize.io/ZitRos/datetime-difference/master/index.js)](https://github.com/ZitRos/datetime-difference/blob/master/index.js)
+[![File Size (GZip)](http://img.badgesize.io/ZitRos/datetime-difference/master/index.js?compression=gzip)](https://github.com/ZitRos/datetime-difference/blob/master/index.js)
 
 A lightweight module which finds the difference between two dates in the human-friendly format. Works almost exactly like [moment's](https://www.npmjs.com/package/moment) `duration(...)` do, but has no dependencies on any libraries — the code is fast and minimal!
 
