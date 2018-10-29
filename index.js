@@ -11,10 +11,10 @@ module.exports = function datetimeDiff (from, to) {
         from = temp;
     }
 
-    let start = [from.getFullYear(), from.getMonth() + 1, from.getDate(), from.getHours(),
-            from.getMinutes(), from.getSeconds(), from.getMilliseconds()],
-        end = [to.getFullYear(), to.getMonth() + 1, to.getDate(), to.getHours(), to.getMinutes(),
-            to.getSeconds(), to.getMilliseconds()],
+    let start = [from.getUTCFullYear(), from.getUTCMonth() + 1, from.getUTCDate(), from.getUTCHours(),
+            from.getUTCMinutes(), from.getUTCSeconds(), from.getUTCMilliseconds()],
+        end = [to.getUTCFullYear(), to.getUTCMonth() + 1, to.getUTCDate(), to.getUTCHours(), to.getUTCMinutes(),
+            to.getUTCSeconds(), to.getUTCMilliseconds()],
         i = 7;
 
     const dec = (i) => {
@@ -25,7 +25,7 @@ module.exports = function datetimeDiff (from, to) {
                 ? r
                 : max[i];
         }
-        return i === 1 ? new Date(end[0], end[1], 0).getDate() : max[i + 1];
+        return i === 1 ? new Date(Date.UTC(end[0], end[1], 0)).getUTCDate() : max[i + 1];
     };
 
     while (i > 0) {
