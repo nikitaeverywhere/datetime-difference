@@ -1,6 +1,6 @@
 {
   "name": "datetime-difference",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight module which finds the difference between two dates in the human-friendly format",
   "main": "index.js",
   "scripts": {
