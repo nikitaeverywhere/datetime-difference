@@ -3,8 +3,9 @@
   "version": "1.0.1",
   "description": "A lightweight module which finds the difference between two dates in the human-friendly format",
   "main": "index.js",
+  "typings": "types/index.d.ts",
   "scripts": {
-    "test": "ava"
+    "test": "ava && dtslint types --onlyTestTsNext"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
   },
   "homepage": "https://github.com/ZitRos/datetime-difference#readme",
   "devDependencies": {
-    "ava": "^0.20.0"
-  }
+    "ava": "^0.20.0",
+    "dtslint": "^0.7.1"
+  },
+  "dependencies": {}
 }
