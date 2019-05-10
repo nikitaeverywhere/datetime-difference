@@ -1,6 +1,6 @@
 {
   "name": "datetime-difference",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight module which finds the difference between two dates in the human-friendly format",
   "main": "index.js",
   "typings": "types/index.d.ts",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/ZitRos/datetime-difference#readme",
   "devDependencies": {
-    "ava": "^0.20.0",
+    "ava": "^1.4.1",
     "dtslint": "^0.7.1"
   },
   "dependencies": {}

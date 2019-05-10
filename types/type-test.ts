@@ -1,6 +1,6 @@
 // TypeScript Version: 2.8
 
-import datetimeDifference, { DateTimeDifference } from 'datetime-difference';
+import datetimeDifference, { DateTimeDifference } from "datetime-difference";
 
 const diff: DateTimeDifference = datetimeDifference(new Date(), new Date());
 
