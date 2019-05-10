@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-    datetimeDiff: datetimeDiff,
+    datetimeDifference: datetimeDiff,
     formatDatetimeDiff: formatDatetimeDiff
 };
 

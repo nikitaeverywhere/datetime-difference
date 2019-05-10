@@ -1,5 +1,5 @@
 import test from "ava";
-import { datetimeDiff, formatDatetimeDiff } from "./index.js";
+import { datetimeDifference as datetimeDiff, formatDatetimeDiff } from "./index.js";
 
 const expect = (expectedValue) => Object.assign({
     "years": 0,
