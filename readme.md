@@ -41,13 +41,17 @@ const result2 = datetimeDifference(date3, date4); /* result2 is {
     "milliseconds": 0
 } */
 
-// Another example: 
-// Get the result in readable format by parsing the resulting object
+// Another example: get the result in readable format by parsing the resulting object
 const readme = Object.keys(result)
     .filter(k => !!result[k])
     .map(k => `${ result[k] } ${ k }`)
     .join(", ");
 // readme is "2 months, 3 days, 13 hours, 48 minutes, 47 seconds"
+
+// Yet another example of formatting (using the string-format library as an example):
+import format from "string-format";
+const string = format("{days} days left", result);
+// string is "3 days left"
 ```
 
 Installation
