@@ -173,21 +173,6 @@ test(`Complex new year case`, (it) => {
 
 });
 
-test(`Complex new year case`, (it) => {
-
-    const result = datetimeDiff(
-        new Date(Date.UTC(2016, 11, 17, 3, 23, 55)),
-        new Date(Date.UTC(2017, 0, 14, 7, 24, 11))
-    );
-
-    it.deepEqual(result, expect({
-        days: 28,
-        hours: 4,
-        seconds: 16
-    }));
-
-});
-
 test(`Years far difference`, (it) => {
 
     const result = datetimeDiff(
