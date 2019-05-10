@@ -1,8 +1,13 @@
 // TypeScript Version: 2.8
 
-import datetimeDifference, { DateTimeDifference } from 'datetime-difference';
+import { datetimeDifference, formatDatetimeDiff, DateTimeDifference } from 'datetime-difference';
 
 const diff: DateTimeDifference = datetimeDifference(new Date(), new Date());
+
+console.log(formatDatetimeDiff(diff));
+console.log(formatDatetimeDiff(diff, ['years']));
+console.log(formatDatetimeDiff(diff, ['years'], true));
+console.log(formatDatetimeDiff(diff, ['years'], false, ' | '));
 
 console.log(diff.days);
 console.log(diff.hours);

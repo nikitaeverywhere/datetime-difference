@@ -1,5 +1,5 @@
 import test from "ava";
-import datetimeDiff from "./index.js";
+import { datetimeDiff, formatDatetimeDiff } from "./index.js";
 
 const expect = (expectedValue) => Object.assign({
     "years": 0,
@@ -293,5 +293,57 @@ test(`Dates before and after a DST change`, (it) => {
     it.deepEqual(result, expect({
         days: 5,
         hours: 4
-    }))
+    }));
+});
+
+
+
+test('Regular formatting', (it) => {
+    const result = formatDatetimeDiff(
+        datetimeDiff(
+            new Date(1540807205042),
+            new Date(1540360805042)
+        )
+    );
+
+    it.deepEqual(result, '5 days, 4 hours');
+});
+
+test('Blacklist formatting', (it) => {
+    const result = formatDatetimeDiff(
+        datetimeDiff(
+            new Date(1540807205042),
+            new Date(1540360805042)
+        ),
+        [ 'hours' ]
+    );
+
+    it.deepEqual(result, '5 days');
+});
+
+test('Whitelist formatting', (it) => {
+    const result = formatDatetimeDiff(
+        datetimeDiff(
+            new Date(1540807205042),
+            new Date(1540360805042)
+        ),
+        [ 'hours' ],
+        false
+    );
+
+    it.deepEqual(result, '4 hours');
+});
+
+test('Glue formatting', (it) => {
+    const result = formatDatetimeDiff(
+        datetimeDiff(
+            new Date(1540807205042),
+            new Date(1540360805042)
+        ),
+        [],
+        true,
+        ' | '
+    );
+
+    it.deepEqual(result, '5 days | 4 hours');
 });

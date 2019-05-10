@@ -1,6 +1,11 @@
 "use strict";
 
-module.exports = function datetimeDiff (from, to) {
+module.exports = {
+    datetimeDiff: datetimeDiff,
+    formatDatetimeDiff: formatDatetimeDiff
+};
+
+function datetimeDiff(from, to) {
 
     const min = [-Infinity, 1, 1, 0, 0, 0, 0];
     const max = [Infinity, 12, null, 24, 60, 60, 1000];
@@ -48,4 +53,18 @@ module.exports = function datetimeDiff (from, to) {
         milliseconds: end[6]
     };
 
-};
+}
+
+function formatDatetimeDiff(diff, excludedKeys = [], blacklist = true, glue = ", ") {
+    if (!diff) {
+        throw new TypeError(`Diff object is ${diff}`);
+    } else if (!Array.isArray(excludedKeys)) {
+        throw new TypeError(`The ${blacklist ? 'black' : 'white'}list is not an array`);
+    }
+
+    return Object.keys(diff)
+        .filter(key => !!diff[key]) //is defined
+        .filter(key => excludedKeys.includes(key) !== blacklist) //if not a blacklist (false), includes(..) should return true
+        .map(key => `${diff[key]} ${key}`)
+        .join(glue);
+}
